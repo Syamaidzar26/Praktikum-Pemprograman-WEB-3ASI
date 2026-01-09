@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        *{
+            color:brown;
+        }
+        h1 {
+            color:blue;
+            border: 2px solid red;
+        }
+        .teks-merah{
+            font-size: 20px;
+            text-align:center;
+            background-color: black;
+            color:red;
+            border: 2px solid red;
+        }
+
+        #teks-kuning{
+            font-size: 20px;
+            text-align: center;
+            background-color:black ;
+            color: yellow;
+            border: 2px solid red;
+        }
+        .teks-merah,
+        #teks-kuning{
+            font-size: 20px;
+            text-align: center;
+            background-color: black;
+            border: 2px solid red;
+        }
+        .teks-merah{
+            color: red;
+            border: 2px solid red;
+        }
+        #teks-kuning{
+            color: yellow;
+            border: 2px solid red;
+        }
+        div p {
+            color: yellow;
+            border: 2px solid red;
+        }
+        div > div > p{
+            font-weight: bold;
+            border: 2px solid red;
+        }
+        .subbagian{
+            font-size: 30px;
+            border: 2px solid red;
+        }
+        .subbagian.header{
+            color: blueviolet;
+        }
+        .subbagian#teks{
+            color: brown;  
+        }
+        p:hover{
+            background-color: aqua;   
+        }
+    </style>
+</head>
+<body>
+    <h1>Pemprograman Web 1</h1>
+    <p class="teks-merah">Praktik pemprogarman web 1 sesi 2 akan membahas tentang penggunaan CSS.</p>
+    <p id="teks-kuning">CSS atau Cascading style sheets adalah sebuah bahasa yang digunakan untuk
+       mengatur tampilan suatu halaman web</p>
+    <div> 
+        <p>Ini adalah paragraf pertama</p>
+        <div> 
+            <p>Ini paragraf kedua</p>
+        </div>
+    </div>
+    <div>
+        <div class="subbagian header"> Bagian header</div>
+        <p class="subbagian" id="teks">Ini adalah paragraf</p>
+    </div>
+</body>
+</html>

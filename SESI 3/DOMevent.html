@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1 id="Uji_heading"
+         onmouseover="sorot(this)"
+         onmouseout="keluarSorot(this)">
+            sorot dong!
+        </h1>
+
+        <h2 id="uji_klik" onmousedown="tahan(this)" onmouseup="lepas(this)">
+            klik dong!
+        </h2>
+
+        <label for="Uji_input"> Uji Coba input</label><br>
+        <input type="text" id="Uji_input"> <br>
+        <span id="uji_span"></span><br>
+        <button onclick="klik()">klik</button>
+        <button onclick="ulangi()">Ulangi</button>
+        <input type="text" id="uji_input" onkeyup="tiru()"><br>
+        <script>
+            function sorot(obj){
+                obj.innerHTML="Sudah disorot";
+            }
+            function keluarSorot(obj){
+                obj.innerHTML="Sorot lagi dong!";
+            }
+            function tahan(obj){
+                obj.innerHTML="Lepasin"
+            }
+            function lepas(obj){
+                obj.innerHTML="klik lagi dong!"
+            }
+            function klik(){
+                valueInput = document.getElementById('uji_input').value;
+                span = document.getElementById('uji_span');
+
+                if (valueInput==""){
+                    span.innerHTML="inputan kosong";
+                    span.style="color:red";
+                } else{
+                    span.innerHTML="Input : '"+valueInput+"'";
+                    span.style="color:blue"
+                }
+
+            }
+            function tiru(){
+                valueInput=document.getElementById('uji_input').value;
+                document.getElementById('uji_span').innerHTML=valueInput;
+            }
+            function ulangi(){
+                document.getElementById('Uji_input').value ="";
+                document.getAnimations('uji_span').innerHTML="";
+                document.getElementById('uji_heading').innerHTML="Sorot dong";
+                document.getElementById('uji_klik').innerHTML="klik dong";
+            }
+        </script>
+    </body>
+</html>
